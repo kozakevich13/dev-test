@@ -19,7 +19,6 @@ function PlayersList() {
         <div className='playerslist'>
             <Player listOfPlayers = {players}/>
         </div>
-        
     </div>
   );
 }

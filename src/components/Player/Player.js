@@ -2,7 +2,12 @@ import './Player.css';
 
 function Player(players) {
 
-    const listItems = players.listOfPlayers.map((person) => <div key={person.id} className='item'><p className='player-name'>{person.name}</p> <p className='team-name'>{person.team}</p></div>);
+  const listItems = players.listOfPlayers.map((person) => 
+    <div key={person.id} className='item'>
+      <p className='player-name'>{person.name}</p> 
+      <p className='team-name'>{person.team}</p>
+    </div>);
+    
   return (
     <div className="player">
         <div className='players-list'>{listItems}</div>
