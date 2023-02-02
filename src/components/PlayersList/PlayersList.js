@@ -5,7 +5,7 @@ import Player from '../Player/Player';
 function PlayersList() {
 
   const [players, setPlayers] = useState([]);
-
+  
   useEffect(() => {
     fetch(" https://www.balldontlie.io/api/v1/players")
       .then((response) => response.json())
