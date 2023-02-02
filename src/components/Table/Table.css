@@ -1,0 +1,62 @@
+.table {
+    margin-left: 26px;
+}
+#name {
+    width: 216px;
+}
+
+#column {
+   width: 118px;
+}
+table,
+
+td {
+    border: 0px solid #333;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    /* Primaries/A/project125-A0 */
+    color: #1C1B1B;
+}
+th {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 117% */
+    
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+    /* Primaries/A/project125-A3-tint-a */
+    
+    color: rgba(28, 27, 27, 0.36);
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}
+
+.header-table {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 51px;
+    line-height: 50px;
+    color: #1C1B1B;
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.main-header {
+    margin-top: 58px;
+    margin-bottom: 32px;
+}
+
