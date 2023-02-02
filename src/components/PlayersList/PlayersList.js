@@ -15,17 +15,13 @@ function PlayersList() {
   }, []);
 
 
-  console.log(players)
-
-
   return (
     <div className="main-players-block">
         <h4 className='header-list'>Pick one of the player</h4>
         <div className='playerslist'>
-        {players.length > 0 &&
-            <Player listOfPlayers = {players}/> 
-        }
-           
+          {players.length > 0 &&
+              <Player listOfPlayers = {players}/> 
+          }
         </div>
     </div>
   );
