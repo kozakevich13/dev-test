@@ -5,11 +5,13 @@
     font-size: 12px;
     line-height: 14px;
     /* identical to box height, or 117% */
-
     letter-spacing: 1px;
     text-transform: uppercase;
-
     /* Primaries/A/project125-A0 */
-
     color: #1C1B1B;
+}
+
+.main-players-block {
+    margin-top: 59px;
+    margin-left: 40px;
 }
