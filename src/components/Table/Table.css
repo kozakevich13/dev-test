@@ -11,7 +11,6 @@
 table,
 
 td {
-    border: 0px solid #333;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -20,6 +19,7 @@ td {
     /* identical to box height, or 167% */
     /* Primaries/A/project125-A0 */
     color: #1C1B1B;
+    
 }
 th {
     font-family: 'Roboto';
@@ -35,6 +35,10 @@ th {
     /* Primaries/A/project125-A3-tint-a */
     
     color: rgba(28, 27, 27, 0.36);
+}
+
+tr {
+    border-bottom: 1px solid rgba(11, 12, 13, 0.1);
 }
 
 thead,

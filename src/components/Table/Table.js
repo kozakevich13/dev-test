@@ -25,6 +25,22 @@ function Table() {
           <td>63</td>
           <td>23%</td>
         </tr>
+        <tr>
+          <td>Andrew Jordan, CHI</td>
+          <td>Chicago Bulls</td>
+          <td>4</td>
+          <td>45</td>
+          <td>63</td>
+          <td>23%</td>
+        </tr>
+        <tr>
+          <td>Andrew Jordan, CHI</td>
+          <td>Chicago Bulls</td>
+          <td>4</td>
+          <td>45</td>
+          <td>63</td>
+          <td>23%</td>
+        </tr>
       </table>
     </div>
   );
