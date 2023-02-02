@@ -9,6 +9,8 @@
     text-transform: uppercase;
     /* Primaries/A/project125-A0 */
     color: #1C1B1B;
+    text-align: left;
+    margin-left: 22px;
 }
 
 .main-players-block {
