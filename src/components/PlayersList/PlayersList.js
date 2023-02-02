@@ -1,23 +1,31 @@
+import React, { useState, useEffect } from "react";
 import './PlayersList.css';
 import Player from '../Player/Player';
 
 function PlayersList() {
 
-    const players = [
-        {id: '1', name: "Michael Jordan, CHI", team: "Chicago Bulls"},
-        {id: '2', name: "Michael Jordan, CHI", team: "Chicago Bulls"},
-        {id: '3', name: "Michael Jordan, CHI", team: "Chicago Bulls"},
-        {id: '4', name: "Michael Jordan, CHI", team: "Chicago Bulls"},
-        {id: '5', name: "Michael Jordan, CHI", team: "Chicago Bulls"},
-        {id: '6', name: "Michael Jordan, CHI", team: "Chicago Bulls"},
-        {id: '7', name: "Michael Jordan, CHI", team: "Chicago Bulls"},
-    ]
+  const [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+    fetch(" https://www.balldontlie.io/api/v1/players")
+      .then((response) => response.json())
+      .then((data) => {
+        setPlayers(data.data);
+      });
+  }, []);
+
+
+  console.log(players)
+
 
   return (
     <div className="main-players-block">
         <h4 className='header-list'>Pick one of the player</h4>
         <div className='playerslist'>
-            <Player listOfPlayers = {players}/>
+        {players.length > 0 &&
+            <Player listOfPlayers = {players}/> 
+        }
+           
         </div>
     </div>
   );
