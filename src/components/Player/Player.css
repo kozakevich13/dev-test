@@ -1,0 +1,23 @@
+.players-list {
+    list-style-type: none
+}
+
+.player {
+    font-family: 'Roboto';
+}
+
+.player-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.team-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
