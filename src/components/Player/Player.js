@@ -1,16 +1,20 @@
 import './Player.css';
+import { useContext } from "react";
+import { Context } from "../../UserContext";
 
-function Player(players) {
+function Player({player}) {
 
-  const listItems = players.listOfPlayers.map((person) => 
-    <button key={person.id} className='item'>
-      <p className='player-name'>{person.first_name} {person.last_name}, {person.team.abbreviation} </p> 
-      <p className='team-name'>{person.team.full_name}</p>
-    </button>);
+  const [context, setContext] = useContext(Context);
 
+  const addUserId = (id) => {
+    setContext(id);
+  };
+
+
+ 
   return (
     <div className="player">
-      <div className='players-list'>{listItems}</div>
+      <button  onClick={() => addUserId(player.id)} className='players-list'>{player.last_name}</button>
     </div>
   );
 }

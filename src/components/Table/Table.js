@@ -1,17 +1,20 @@
 import './Table.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { Context } from "../../UserContext";
 
 function Table() {
 
   const [ userInfo, setUserInfo] = useState([])
+  const [ userStat, setUserStat] = useState([])
+  const [context, setContext] = useContext(Context);
     
   useEffect(() => {
-    fetch("https://www.balldontlie.io/api/v1/players/237")
+    fetch(`https://www.balldontlie.io/api/v1/players/${context}`)
       .then((response) => response.json())
       .then((data) => {
         setUserInfo(data);
       });
-  }, []);
+  }, [context]);
 
 
 
@@ -32,30 +35,16 @@ function Table() {
           <th id='column'>FG</th>
         </tr>
         <tr>
-          <td>Andrew Jordan, CHI</td>
-          <td>Chicago Bulls</td>
-          <td>4</td>
-          <td>45</td>
-          <td>63</td>
-          <td>23%</td>
-        </tr>
-        <tr>
-          <td>Andrew Jordan, CHI</td>
-          <td>Chicago Bulls</td>
-          <td>4</td>
-          <td>45</td>
-          <td>63</td>
-          <td>23%</td>
-        </tr>
-        <tr>
-          <td>Andrew Jordan, CHI</td>
-          <td>Chicago Bulls</td>
+          <td>{userInfo.first_name}</td>
+          <td>team</td>
           <td>4</td>
           <td>45</td>
           <td>63</td>
           <td>23%</td>
         </tr>
       </table>
+
+      <div>{context}</div>
     </div>
   );
 }
