@@ -1,6 +1,20 @@
 import './Table.css';
+import { useEffect, useState } from 'react';
 
 function Table() {
+
+  const [ userInfo, setUserInfo] = useState([])
+    
+  useEffect(() => {
+    fetch("https://www.balldontlie.io/api/v1/players/237")
+      .then((response) => response.json())
+      .then((data) => {
+        setUserInfo(data);
+      });
+  }, []);
+
+
+
   return (
     <div className="table">
       <div className='main-header'>
