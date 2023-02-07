@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import PlayersList from './components/PlayersList/PlayersList';
-import Table from './components/Table/Table';
+import Display from './components/Display/Display';
 import { Context } from "./UserContext";
 
 
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
        <Context.Provider value={[userId, setUserId]}>
         <PlayersList/>
-        <Table/>
+        <Display/>
         </Context.Provider>
     </div>
   );

@@ -1,8 +1,8 @@
-import './Table.css';
+import './Display.css';
 import { useEffect, useState, useContext } from 'react';
 import { Context } from "../../UserContext";
 
-function Table() {
+function Display() {
 
   const [ userInfo, setUserInfo] = useState([])
   const [context, setContext] = useContext(Context);
@@ -42,4 +42,4 @@ function Table() {
   );
 }
 
-export default Table;
+export default Display;
