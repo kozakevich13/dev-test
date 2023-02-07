@@ -5,7 +5,6 @@ import { Context } from "../../UserContext";
 function Table() {
 
   const [ userInfo, setUserInfo] = useState([])
-  const [ userStat, setUserStat] = useState([])
   const [context, setContext] = useContext(Context);
     
   useEffect(() => {
@@ -15,8 +14,6 @@ function Table() {
         setUserInfo(data);
       });
   }, [context]);
-
-
 
   return (
     <div className="table">
@@ -29,22 +26,18 @@ function Table() {
         <tr className='name-column'>
           <th id='name'>NAME</th>
           <th id='column'>TEAM</th>
-          <th id='column'>GP</th>
-          <th id='column'>MIN</th>
-          <th id='column'>PTS</th>
-          <th id='column'>FG</th>
+          <th id='column'>CITY</th>
+          <th id='column'>DIVISION</th>
+          <th id='column'>CONFERENCE</th>
         </tr>
         <tr>
-          <td>{userInfo.first_name}</td>
-          <td>team</td>
-          <td>4</td>
-          <td>45</td>
-          <td>63</td>
-          <td>23%</td>
+          <td>{userInfo.first_name} {userInfo.last_name}, {userInfo.team.abbreviation} </td>
+          <td>{userInfo.team.full_name}</td>
+          <td>{userInfo.team.city}</td>
+          <td>{userInfo.team.division}</td>
+          <td>{userInfo.team.conference}</td>
         </tr>
       </table>
-
-      <div>{context}</div>
     </div>
   );
 }
