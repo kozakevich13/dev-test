@@ -9,12 +9,10 @@ function Player({player}) {
   const addUserId = (id) => {
     setContext(id);
   };
-
-
  
   return (
     <div className="player">
-      <button  onClick={() => addUserId(player.id)} className='players-list'>{player.last_name}</button>
+      <button onClick={() => addUserId(player.id)} className='item'>{player.first_name} {player.last_name}, {player.team.abbreviation}</button>
     </div>
   );
 }

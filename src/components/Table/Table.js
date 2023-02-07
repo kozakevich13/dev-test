@@ -31,11 +31,11 @@ function Table() {
           <th id='column'>CONFERENCE</th>
         </tr>
         <tr>
-          <td>{userInfo.first_name} {userInfo.last_name}, {userInfo.team.abbreviation} </td>
+          {/* <td>{userInfo.first_name} {userInfo.last_name}, {userInfo.team.abbreviation} </td>
           <td>{userInfo.team.full_name}</td>
           <td>{userInfo.team.city}</td>
           <td>{userInfo.team.division}</td>
-          <td>{userInfo.team.conference}</td>
+          <td>{userInfo.team.conference}</td> */}
         </tr>
       </table>
     </div>

@@ -14,18 +14,13 @@ function PlayersList() {
       });
   }, []);
 
-  
-  const playersList = players.map(player => <Player   key={player.id} player={player}/>)
+  const playersList = players && players.map(player => <Player key={player.id} player={player}/>)
 
   return (
     <div className="main-players-block">
         <h4 className='header-list'>Pick one of the player</h4>
         <div className='playerslist'>
-         
-              
-          {
-            playersList
-          }
+          {playersList}
         </div>
     </div>
   );
