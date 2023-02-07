@@ -1,27 +1,11 @@
-import './Display.css';
-import { useEffect, useState, useContext } from 'react';
-import { Context } from "../../UserContext";
+import './Table.css';
 
-function Display() {
+function Table() {
 
-  const [ userInfo, setUserInfo] = useState([])
-  const [context, setContext] = useContext(Context);
-    
-  useEffect(() => {
-    fetch(`https://www.balldontlie.io/api/v1/players/${context}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setUserInfo(data);
-      });
-  }, [context]);
+ 
 
   return (
-    <div className="display">
-      <div className='main-header'>
-        <p className='header-table'>NBA</p>
-        <h2 className='header-table'>players board</h2>
-      </div>
-      
+    <div className="table">
       <table className="main-table">
         <tr className='name-column'>
           <th id='name'>NAME</th>
