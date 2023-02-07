@@ -1,0 +1,47 @@
+#name {
+    width: 216px;
+}
+
+#column {
+    width: 118px;
+}
+
+ td {
+    border-bottom: 1px solid rgba(11, 12, 13, 0.1);
+}
+
+table {
+    width: 100%;
+}
+table,
+
+td {
+    height: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #1C1B1B;
+    text-align: left;   
+}
+th {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(28, 27, 27, 0.36);
+}
+
+tr {
+    border-bottom: 1px solid rgba(11, 12, 13, 0.1);
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}

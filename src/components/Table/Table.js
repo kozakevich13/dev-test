@@ -1,8 +1,6 @@
 import './Table.css';
 
-function Table() {
-
- 
+function Table(userInfo) {
 
   return (
     <div className="table">
@@ -15,15 +13,15 @@ function Table() {
           <th id='column'>CONFERENCE</th>
         </tr>
         <tr>
-          {/* <td>{userInfo.first_name} {userInfo.last_name}, {userInfo.team.abbreviation} </td>
-          <td>{userInfo.team.full_name}</td>
-          <td>{userInfo.team.city}</td>
-          <td>{userInfo.team.division}</td>
-          <td>{userInfo.team.conference}</td> */}
+          <td>{userInfo.player.first_name} {userInfo.player.last_name}, {userInfo.player.team.abbreviation} </td>
+          <td>{userInfo.player.team.full_name}</td>
+          <td>{userInfo.player.team.city}</td>
+          <td>{userInfo.player.team.division}</td>
+          <td>{userInfo.player.team.conference}</td>
         </tr>
       </table>
     </div>
   );
 }
 
-export default Display;
+export default Table;
