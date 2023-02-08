@@ -7,7 +7,7 @@ import { Context } from "./UserContext";
 
 function App() {
 
-  const [userId, setUserId] = useState([14])
+  const [userId, setUserId] = useState()
   return (
     <div className="App">
        <Context.Provider value={[userId, setUserId]}>

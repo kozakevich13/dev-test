@@ -12,7 +12,7 @@ function Player({player}) {
  
   return (
     <div className="player">
-      <button onClick={() => addUserId(player.id)} className='item'>{player.first_name} {player.last_name}, {player.team.abbreviation}</button>
+      <button onClick={() => addUserId(player.id)} className='item'>{player.id} {player.first_name} {player.last_name}, {player.team.abbreviation}</button>
     </div>
   );
 }
