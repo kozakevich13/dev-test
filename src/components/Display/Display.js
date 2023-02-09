@@ -8,24 +8,48 @@ function Display() {
   const [userInfo, setUserInfo] = useState([])
   const [context, setContext] = useContext(Context);
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [main, setMain] = useState()
     
   useEffect(() => {
-    fetch(`https://www.balldontlie.io/api/v1/players/${context}`)
+
+    // if(userInfo == 0 || userInfo.find(x => x.id === context) ) {
+      console.log('спрацьовує запрос')
+      fetch(`https://www.balldontlie.io/api/v1/players/${context}`)
       .then((response) => response.json())
       .then((data) => {
         setUserInfo([...userInfo, data]);
         setIsLoggedIn(true)
       });
+    // }
   }, [context]);
 
 
- 
- 
-  function removeDuplicates  (arr)  {
-    const strArr = arr.map((obj) => JSON.stringify(obj));
-    const uniq = [...new Set(strArr)].map((u) => JSON.parse(u));
-    return uniq;
-  };
+  useEffect(()=>{
+    if(userInfo.find(x => x.id === context)) {
+      console.log('спрацьовує видалення елемена')
+      const objWithIdIndex = userInfo.findIndex((obj) => obj.id === context);
+      if (objWithIdIndex > -1) {
+        userInfo.splice(objWithIdIndex, 1);
+      }
+      setUserInfo(userInfo)
+    }
+  },[context])
+
+
+  // useEffect(()=>{
+  //   if(userInfo.find(x => x.id === context)) {
+  //     console.log('dduplica')
+  //     const objWithIdIndex = userInfo.findIndex((obj) => obj.id === context);
+  //     if (objWithIdIndex > -1) {
+  //       userInfo.splice(objWithIdIndex, 1);
+  //     }
+  //     setUserInfo(userInfo)
+
+  //   }
+  // },[userInfo])
+
+  console.log(userInfo)
+
 
 
   // const removeObjectWithId = (arr, id) => {
@@ -50,7 +74,7 @@ function Display() {
         <p className='header-table'>NBA</p>
         <h2 className='header-table'>players board</h2>
       </div>
-      <div onClick={()=>{test()}}>
+      <div >
         {isLoggedIn ? (
           userInfo.map(player => <Table key={player.id} player={player}/>)
         ) : (
